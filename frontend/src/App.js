@@ -135,6 +135,7 @@ function App() {
           </div>
         </div>
         <p className="footer-attribution">Data sources: WeatherAPI.com, OpenStreetMap, NewsAPI.org, Government Environmental Agencies</p>
+        <p className="footer-main">Made with ❤️ by Pranab</p>
       </footer>
       </main>
 
