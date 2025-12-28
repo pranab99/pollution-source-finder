@@ -1,0 +1,311 @@
+/* Pollution News Component Styling */
+
+.pollution-news-container {
+  margin-top: 40px;
+  padding: 25px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f4f8 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(52, 152, 219, 0.2);
+}
+
+.news-header h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+.news-count {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.news-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.news-table thead {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.news-table th {
+  padding: 15px;
+  text-align: left;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.col-title {
+  width: 45%;
+}
+
+.col-source {
+  width: 20%;
+}
+
+.col-date {
+  width: 20%;
+}
+
+.col-action {
+  width: 15%;
+}
+
+.news-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-table tbody tr:hover {
+  background-color: #f8fafb;
+  box-shadow: inset 0 1px 3px rgba(52, 152, 219, 0.1);
+}
+
+.news-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.news-row td {
+  padding: 15px;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+.title-text {
+  font-weight: 600;
+  color: #2980b9;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.title-text:hover {
+  color: #3498db;
+}
+
+.description-text {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-top: 6px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.source-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.date-text {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.read-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.read-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+  text-decoration: none;
+}
+
+.read-link:active {
+  transform: translateY(0);
+}
+
+.no-news {
+  text-align: center;
+  padding: 40px 20px;
+  color: #7f8c8d;
+  background: white;
+  border-radius: 8px;
+}
+
+.no-news p {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #95a5a6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .col-title {
+    width: 50%;
+  }
+  
+  .col-source {
+    width: 18%;
+  }
+  
+  .col-date {
+    width: 18%;
+  }
+  
+  .col-action {
+    width: 14%;
+  }
+
+  .title-text {
+    font-size: 0.9rem;
+  }
+
+  .description-text {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pollution-news-container {
+    padding: 15px;
+  }
+
+  .news-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .news-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .news-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .col-title {
+    width: 40%;
+  }
+
+  .col-source {
+    width: 30%;
+    padding: 12px 8px;
+  }
+
+  .col-date {
+    width: 0%;
+    display: none;
+  }
+
+  .col-action {
+    width: 30%;
+  }
+
+  .news-table th,
+  .news-row td {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+
+  .date-text {
+    display: none;
+  }
+
+  .read-link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .source-badge {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .title-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pollution-news-container {
+    padding: 12px;
+    margin-top: 30px;
+  }
+
+  .news-header h3 {
+    font-size: 1rem;
+  }
+
+  .col-source {
+    width: 35%;
+  }
+
+  .col-action {
+    width: 25%;
+  }
+
+  .read-link {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+  }
+
+  .news-table th,
+  .news-row td {
+    padding: 10px 6px;
+    font-size: 0.8rem;
+  }
+
+  .title-text {
+    font-size: 0.75rem;
+  }
+
+  .source-badge {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+  }
+}
